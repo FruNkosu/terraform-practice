@@ -1,19 +1,43 @@
 variable "subnet_cidr_block" {
    description  = "subnet cidr block"
-   default = "10.0.10.0/24"
    type = string
 }
 
-variable "cidr_blocks" {
-    default = ["10.0.0.0/16" , "10.0.10.0/24"]
-    description  = "cidr blocks for subnet and vpc"  
-   type = list(string)
+variable "vpc_cidr_block" {
+   description  = "cidr blocks for vpc"  
+   type = string
     
 }
 
 variable "avail_zone" {
- default = "us-east-1a"
  description = "Availability zone for the network"
  type = string
 
+}
+
+variable "env_prefix" {
+    description = "Environment prefix for the network"
+    type = string 
+}
+
+variable "my_ip" {
+    description = "IP address for the network"
+    type = string
+}
+
+variable "instance_type" {
+    description = "Instance type for server"
+    type = string
+}
+
+
+
+ variable "key_pair" {
+    description = "key pair for server"
+    type = string
+}
+
+variable "default_public_key_location" {
+    description = "default key pair for server"
+    type = string
 }
