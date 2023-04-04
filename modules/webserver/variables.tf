@@ -1,7 +1,3 @@
-variable "vpc_cidr_block" {
-   description  = "subnet cidr block"
-   type = string
-}
 variable "my_ip" {
     description = "IP address for the network"
     type = string
@@ -29,6 +25,10 @@ variable "image_type" {
 
 }
     
+variable "subnet_id" {
+    description = "subnet id for server"
+    type = string 
+}
 
 variable "env_prefix" {
     description = "Environment prefix for the network"
@@ -39,9 +39,7 @@ variable "avail_zone" {
  type = string
 
 } 
-
-variable "subnet_cidr_block" {
-   description  = "subnet cidr block"
-   type = string
+variable "vpc_id" {
+    description = "vpc id for network "
+    type = string
 }
-
